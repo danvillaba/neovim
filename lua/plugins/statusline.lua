@@ -1,7 +1,6 @@
 return {
-  -- Set lualine as statusline
   'nvim-lualine/lualine.nvim',
-  -- See `:help lualine.txt`
+  dependencies = { 'RRethy/nvim-base16' },
   opts = {
     options = {
       icons_enabled = true,

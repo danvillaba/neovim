@@ -17,7 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({ import = 'plugins' }, {})
 
-vim.cmd.colorscheme 'rose-pine'
+vim.cmd.colorscheme 'base16-rose-pine'
 
 vim.o.hlsearch = false
 vim.wo.number = true

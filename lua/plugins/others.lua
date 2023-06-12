@@ -1,5 +1,6 @@
 return {
   'tpope/vim-sleuth',
+  { 'windwp/nvim-autopairs', opts = {} },
   { 'numToStr/Comment.nvim', opts = {} },
   { 'folke/which-key.nvim',  opts = {} },
   {
@@ -8,8 +9,10 @@ return {
   {
     'lukas-reineke/indent-blankline.nvim',
     opts = {
+      identLine_enabled = 1,
       buftype_exclude = { "terminal" },
       show_trailing_blankline_indent = false,
+      use_treesitter = true,
       show_first_indent_level = false,
       show_current_context = true,
       show_current_context_start = true,
@@ -25,7 +28,7 @@ return {
   },
   {
     "kylechui/nvim-surround",
-    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    version = "*",
     event = "VeryLazy",
     opts = {}
   }

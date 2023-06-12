@@ -12,7 +12,25 @@ return {
   keys = {
     { '<leader>e', '<cmd>Neotree<CR>', desc = 'File tree' }
   },
-  config = function()
-    require('neo-tree').setup {}
+  config = function(_, opts)
+    require('neo-tree').setup(opts)
   end,
+  opts = {
+    sources = { 'filesystem', 'git_status' },
+    source_selector = {
+      winbar = true,
+      content_layout = 'center',
+      sources = {
+        { source = 'filesystem', display_name = '' },
+        { source = 'git_status', display_name = '󰊢 ' },
+      }
+    },
+    window = {
+      mappings = {
+        ['<space>'] = false,
+        ['['] = 'prev_source',
+        [']'] = 'next_source',
+      }
+    }
+  },
 }
